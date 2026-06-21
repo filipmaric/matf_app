@@ -1,62 +1,100 @@
-# Android app scaffold
+# MATF Android App
 
-Minimal Android client for the remote MATF reservation and attendance API.
+Android client for the MATF reservation and attendance backend.
 
-## What it includes
+## Requirements
 
-- Login screen
-- Secure bearer token storage in the Android Keystore
-- Startup session validation
-- Logout button
-- QR scan flow for logged-in students
-- Remote API integration:
-  - [Authentication API](API.md#authentication)
-  - [Attendance API](API.md#attendance)
+- Android Studio Jellyfish or newer
+- JDK 17
+- Android SDK with compile SDK 36 support
+- A running backend instance
+
+## Clone
+
+```bash
+git clone https://github.com/filipmaric/matf_app.git
+cd matf_app
+```
+
+## Build
+
+From the repository root:
+
+```bash
+./gradlew assembleDebug
+```
+
+To compile only:
+
+```bash
+./gradlew :app:compileDebugKotlin
+```
+
+To install on a connected device or emulator:
+
+```bash
+./gradlew installDebug
+```
 
 ## Backend URL
 
-The app currently defaults to:
+The app reads the backend base URL from, in order:
 
-- `http://10.0.2.2:5000/`
+1. Gradle property `BACKEND_BASE_URL`
+2. Environment variable `BACKEND_BASE_URL`
+3. `app/local.properties` entry `serverBaseUrl`
+4. Default emulator URL `http://10.0.2.2:5000/`
 
-That is the Flask app base URL from the Android emulator.
-Set the exact server base URL that serves the API, including any path prefix if your
-deployment uses one.
+Examples:
 
-To override it without editing source, set one of these:
+```properties
+# app/local.properties
+serverBaseUrl=http://10.0.2.2:5000/
+```
 
-- Gradle property: `-PBACKEND_BASE_URL=https://example.com/`
-- Environment variable: `BACKEND_BASE_URL=https://example.com/`
-- `local.properties`: `serverBaseUrl=https://example.com/`
+```bash
+BACKEND_BASE_URL=https://example.com/ ./gradlew assembleDebug
+```
 
-`local.properties` is the most convenient choice for a physical device because it stays
-local to your machine.
+Use:
+- `http://10.0.2.2:5000/` for a backend running on the same machine as the Android emulator
+- your machine IP, for example `http://192.168.1.152:5000/`, when testing on a physical phone on the same network
 
-## Release Signing
+## Release signing
 
-Release builds require a signing key. Put the following values in `app/local.properties`
-or provide them as environment variables or Gradle properties:
+Release builds are signed when these values are available in `app/local.properties`
+or as Gradle properties / environment variables:
 
-- `releaseStoreFile=/absolute/path/to/keystore.jks`
-- `releaseStorePassword=...`
-- `releaseKeyAlias=...`
-- `releaseKeyPassword=...`
+- `releaseStoreFile`
+- `releaseStorePassword`
+- `releaseKeyAlias`
+- `releaseKeyPassword`
 
-When these values are present, `./gradlew assembleRelease` uses them automatically.
-If they are missing, release tasks fail with a clear error.
+Example:
+
+```properties
+# app/local.properties
+releaseStoreFile=/absolute/path/to/keystore.jks
+releaseStorePassword=secret
+releaseKeyAlias=matf
+releaseKeyPassword=secret
+```
+
+Then build release APKs with:
+
+```bash
+./gradlew assembleRelease
+```
+
+## Project structure
+
+- `auth/` login and token storage
+- `attendance/history/` attendance summary screen
+- `attendance/registration/` QR attendance flow
+- `API.md` backend API reference
 
 ## Notes
 
-- Cleartext HTTP is enabled only for development.
-- The first version keeps the UI simple and state-driven.
-- Use `./gradlew` from the `android/` directory for builds and tasks.
-- The wrapper is pinned to Gradle `8.9`.
-
-## API Reference
-
-The Android client talks to a remote Flask API. The remote API consists of:
-
-- Authentication endpoints for session-based login with opaque bearer tokens
-- Attendance endpoints for QR challenge retrieval and submission
-
-See [API.md](API.md) for request and response details.
+- `local.properties` is intentionally ignored by git.
+- The app uses cleartext HTTP only for development targets.
+- The current UI is split into small controllers and state objects around the attendance scan flow.
