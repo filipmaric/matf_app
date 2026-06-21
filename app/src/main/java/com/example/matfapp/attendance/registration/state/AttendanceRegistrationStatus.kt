@@ -1,0 +1,8 @@
+package com.example.matfapp.attendance.registration
+
+enum class AttendanceRegistrationStatus {
+    ACTIVE,
+    SUCCESS,
+    BLOCKED,
+    EXPIRED,
+}
