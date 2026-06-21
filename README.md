@@ -88,6 +88,8 @@ Then build release APKs with:
 
 ## Project structure
 
+- `ui/home/` main logged-in screen
+- `ui/login/` login screen
 - `auth/` login and token storage
 - `attendance/history/` attendance summary screen
 - `attendance/registration/` QR attendance flow

@@ -1,4 +1,4 @@
-package com.example.matfapp
+package com.example.matfapp.ui.login
 
 import android.content.Intent
 import android.os.Bundle
@@ -12,11 +12,14 @@ import android.widget.TextView.OnEditorActionListener
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import android.view.inputmethod.EditorInfo
+import com.example.matfapp.BuildConfig
+import com.example.matfapp.R
 import com.example.matfapp.auth.AuthRepository
 import com.example.matfapp.auth.AuthState
 import com.example.matfapp.auth.AuthViewModel
 import com.example.matfapp.auth.AuthViewModelFactory
 import com.example.matfapp.auth.HttpAuthApi
+import com.example.matfapp.ui.home.MainActivity
 
 class LoginActivity : AppCompatActivity() {
     companion object {
