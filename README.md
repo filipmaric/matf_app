@@ -1,5 +1,7 @@
 # MATF Android App
 
+[![Android CI](https://github.com/filipmaric/matf_app/actions/workflows/android-ci.yml/badge.svg)](https://github.com/filipmaric/matf_app/actions/workflows/android-ci.yml)
+
 Android client for the MATF reservation and attendance backend.
 
 ## Requirements
