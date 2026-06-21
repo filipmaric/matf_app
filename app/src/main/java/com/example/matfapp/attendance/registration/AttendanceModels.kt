@@ -1,6 +1,6 @@
-package com.example.matfapp.attendance.registration
+package rs.ac.bg.matf.attendance.registration
 
-import com.example.matfapp.attendance.AttendanceLocation
+import rs.ac.bg.matf.attendance.AttendanceLocation
 
 data class AttendanceTarget(
     val kind: String,

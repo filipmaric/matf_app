@@ -1,4 +1,4 @@
-package com.example.matfapp.attendance.history
+package rs.ac.bg.matf.attendance.history
 
 import android.graphics.Color
 import android.graphics.Typeface
@@ -15,9 +15,9 @@ import androidx.appcompat.widget.Toolbar
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.DrawableCompat
-import com.example.matfapp.BuildConfig
-import com.example.matfapp.R
-import com.example.matfapp.attendance.history.AttendanceHistoryApi
+import rs.ac.bg.matf.BuildConfig
+import rs.ac.bg.matf.R
+import rs.ac.bg.matf.attendance.history.AttendanceHistoryApi
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 

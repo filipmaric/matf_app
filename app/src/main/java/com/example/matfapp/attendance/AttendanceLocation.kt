@@ -1,4 +1,4 @@
-package com.example.matfapp.attendance
+package rs.ac.bg.matf.attendance
 
 data class AttendanceLocation(
     val name: String,

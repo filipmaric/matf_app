@@ -1,4 +1,4 @@
-package com.example.matfapp.auth
+package rs.ac.bg.matf.auth
 
 data class LoginRequest(
     val username: String,

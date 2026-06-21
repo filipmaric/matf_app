@@ -1,6 +1,6 @@
-package com.example.matfapp.auth
+package rs.ac.bg.matf.auth
 
-import com.example.matfapp.auth.AuthSession
+import rs.ac.bg.matf.auth.AuthSession
 
 sealed class AuthState {
     data object Loading : AuthState()

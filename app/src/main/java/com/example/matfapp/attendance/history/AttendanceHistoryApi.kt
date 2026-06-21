@@ -1,6 +1,6 @@
-package com.example.matfapp.attendance.history
+package rs.ac.bg.matf.attendance.history
 
-import com.example.matfapp.auth.ApiException
+import rs.ac.bg.matf.auth.ApiException
 import org.json.JSONObject
 import java.net.HttpURLConnection
 import java.net.URL

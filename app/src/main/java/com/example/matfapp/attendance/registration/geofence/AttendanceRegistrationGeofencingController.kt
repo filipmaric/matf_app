@@ -1,11 +1,11 @@
-package com.example.matfapp.attendance.registration
+package rs.ac.bg.matf.attendance.registration
 
 import android.Manifest
 import android.content.pm.PackageManager
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import com.example.matfapp.R
-import com.example.matfapp.attendance.AttendanceLocation
+import rs.ac.bg.matf.R
+import rs.ac.bg.matf.attendance.AttendanceLocation
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.Priority
 import com.google.android.gms.tasks.CancellationTokenSource

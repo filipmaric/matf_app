@@ -1,4 +1,4 @@
-package com.example.matfapp.auth
+package rs.ac.bg.matf.auth
 
 import android.content.Context
 import android.provider.Settings

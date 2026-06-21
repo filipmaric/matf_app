@@ -1,6 +1,6 @@
-package com.example.matfapp.attendance.registration
+package rs.ac.bg.matf.attendance.registration
 
-import com.example.matfapp.auth.ApiException
+import rs.ac.bg.matf.auth.ApiException
 
 sealed class AttendanceRegistrationFailureReason {
     data object WrongChallengeNumber : AttendanceRegistrationFailureReason()

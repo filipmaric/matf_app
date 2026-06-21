@@ -88,11 +88,11 @@ val releaseSigningConfig: ReleaseSigningConfig? = run {
 }
 
 android {
-    namespace = "com.example.matfapp"
+    namespace = "rs.ac.bg.matf"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.matfapp"
+        applicationId = "rs.ac.bg.matf"
         minSdk = 26
         targetSdk = 36
         versionCode = 1

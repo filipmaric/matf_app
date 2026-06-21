@@ -1,4 +1,4 @@
-package com.example.matfapp.attendance.registration
+package rs.ac.bg.matf.attendance.registration
 
 data class AttendanceRegistrationAttemptState(
     val activeTarget: AttendanceTarget? = null,

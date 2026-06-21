@@ -1,7 +1,7 @@
-package com.example.matfapp.attendance.registration
+package rs.ac.bg.matf.attendance.registration
 
-import com.example.matfapp.auth.ApiException
-import com.example.matfapp.attendance.AttendanceLocation
+import rs.ac.bg.matf.auth.ApiException
+import rs.ac.bg.matf.attendance.AttendanceLocation
 import org.json.JSONObject
 import java.io.IOException
 import java.net.HttpURLConnection

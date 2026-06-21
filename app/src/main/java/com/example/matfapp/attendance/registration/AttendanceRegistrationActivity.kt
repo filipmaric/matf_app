@@ -1,4 +1,4 @@
-package com.example.matfapp.attendance.registration
+package rs.ac.bg.matf.attendance.registration
 
 import android.os.Bundle
 import android.os.Handler
@@ -10,8 +10,8 @@ import android.widget.TextView
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.view.PreviewView
-import com.example.matfapp.BuildConfig
-import com.example.matfapp.R
+import rs.ac.bg.matf.BuildConfig
+import rs.ac.bg.matf.R
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.tasks.CancellationTokenSource
 import java.util.concurrent.ExecutorService

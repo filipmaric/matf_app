@@ -1,4 +1,4 @@
-package com.example.matfapp.attendance.history
+package rs.ac.bg.matf.attendance.history
 
 data class SemesterInfo(
     val id: Long,

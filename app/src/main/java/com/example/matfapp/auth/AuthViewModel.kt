@@ -1,4 +1,4 @@
-package com.example.matfapp.auth
+package rs.ac.bg.matf.auth
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

@@ -1,4 +1,4 @@
-package com.example.matfapp.attendance.registration
+package rs.ac.bg.matf.attendance.registration
 
 sealed class AttendanceRegistrationQrOutcome {
     data object PermissionRequired : AttendanceRegistrationQrOutcome()

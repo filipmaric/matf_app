@@ -1,4 +1,4 @@
-package com.example.matfapp.attendance.registration
+package rs.ac.bg.matf.attendance.registration
 
 import android.content.Context
 import android.graphics.Typeface
@@ -8,7 +8,7 @@ import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.core.content.ContextCompat
-import com.example.matfapp.R
+import rs.ac.bg.matf.R
 
 class AttendanceRegistrationUi(
     private val context: Context,

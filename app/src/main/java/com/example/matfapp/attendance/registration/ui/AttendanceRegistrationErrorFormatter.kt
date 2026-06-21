@@ -1,7 +1,7 @@
-package com.example.matfapp.attendance.registration
+package rs.ac.bg.matf.attendance.registration
 
 import android.content.Context
-import com.example.matfapp.R
+import rs.ac.bg.matf.R
 import org.json.JSONObject
 
 class AttendanceRegistrationErrorFormatter(

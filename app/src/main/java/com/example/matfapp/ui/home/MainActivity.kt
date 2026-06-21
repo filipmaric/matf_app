@@ -1,4 +1,4 @@
-package com.example.matfapp.ui.home
+package rs.ac.bg.matf.ui.home
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,13 +9,13 @@ import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.DrawableCompat
 import android.graphics.Color
-import com.example.matfapp.BuildConfig
-import com.example.matfapp.R
-import com.example.matfapp.attendance.history.AttendanceHistoryActivity
-import com.example.matfapp.attendance.registration.AttendanceRegistrationActivity
-import com.example.matfapp.ui.login.LoginActivity
-import com.example.matfapp.auth.AuthRepository
-import com.example.matfapp.auth.HttpAuthApi
+import rs.ac.bg.matf.BuildConfig
+import rs.ac.bg.matf.R
+import rs.ac.bg.matf.attendance.history.AttendanceHistoryActivity
+import rs.ac.bg.matf.attendance.registration.AttendanceRegistrationActivity
+import rs.ac.bg.matf.ui.login.LoginActivity
+import rs.ac.bg.matf.auth.AuthRepository
+import rs.ac.bg.matf.auth.HttpAuthApi
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
