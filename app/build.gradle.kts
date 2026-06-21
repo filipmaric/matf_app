@@ -141,7 +141,13 @@ android {
 
 gradle.taskGraph.whenReady {
     val releaseTasksRequested = allTasks.any { task ->
-        task.name.contains("Release", ignoreCase = true)
+        val taskName = task.name.lowercase()
+        taskName == "assemblerelease" ||
+            taskName == "bundlerelease" ||
+            taskName == "installrelease" ||
+            taskName == "packagerelease" ||
+            taskName == "signreleasebundle" ||
+            taskName == "publishrelease"
     }
     if (releaseTasksRequested && releaseSigningConfig == null) {
         throw GradleException(
